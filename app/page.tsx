@@ -29,7 +29,7 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">
               <Zap className="h-6 w-6 text-purple-500" />
-              <span className="text-xl font-bold">Impulse</span>
+              <span className="text-xl font-bold">Impulseia</span>
             </Link>
           </div>
           <nav className="hidden md:flex items-center gap-6">

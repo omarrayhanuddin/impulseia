@@ -37,23 +37,22 @@ export default function HeroSection() {
             className="text-center lg:text-left"
           >
             <div className="inline-flex items-center rounded-full border border-zinc-800 px-4 py-1.5 text-sm font-medium mb-6">
-              <span className="text-purple-500 mr-1">•</span> Welcome to Impulse
+              <span className="text-purple-500 mr-1">•</span> Welcome to Impulseia
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white">
-              Innovative Software Solutions with <span className="text-purple-500">Impulse</span>
+              Innovative <span className="text-purple-500">Businesses</span>  Solutions with <span className="text-purple-500">Impulseia</span>
             </h1>
             <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto lg:mx-0">
-              We help businesses transform and grow with cutting-edge software solutions tailored to their unique needs
-              and challenges.
+              We help unleash potential businesses transform and grow with next-gen tech solutions. 🚀   
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button
                 size="lg"
                 className="bg-purple-600 hover:bg-purple-700 gap-2"
-                onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               >
-                Get Started
+                Contact Us
                 <ArrowRight className="h-4 w-4" />
               </Button>
               <Button
@@ -88,9 +87,9 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl border border-zinc-800">
+            <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl border border-zinc-800 ">
               <Image
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop"
+                src="https://wp.pixelfit.agency/sasfy/creative-agency/wp-content/uploads/sites/7/2024/12/business-blog-5-768x497.webp"
                 alt="Software Dashboard"
                 width={800}
                 height={600}
