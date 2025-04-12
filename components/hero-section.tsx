@@ -6,6 +6,8 @@ import { motion } from "framer-motion"
 import { ArrowRight, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import PulseEffect from "@/components/pulse-effect"
+import Marquee from 'react-fast-marquee';
+
 
 export default function HeroSection() {
   const [mounted, setMounted] = useState(false)
@@ -148,6 +150,17 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
+      {/* // Marquee Section (No Horizontal Scrollbar) */}
+    <div className="w-screen overflow-hidden border-y border-gray-800 py-10 mt-16">
+      <Marquee speed={90} gradient={false}>
+        <div className="flex items-center gap-24 px-6">
+          <span className="text-5xl md:text-7xl font-bold tracking-tighter uppercase text-white-700  text-center">
+          EMPOWER YOUR BRAND’S WITH <span className="text-5xl md:text-7xl font-bold tracking-tighter uppercase text-white-700 text-center">IMPULSEIA</span>
+          </span>
+          
+        </div>
+      </Marquee>
+    </div>
     </section>
   )
 }

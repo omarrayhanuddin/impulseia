@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import { useRouter } from 'next/navigation'
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
@@ -17,6 +18,9 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ icon, title, description, features }: ServiceCardProps) {
   const [mounted, setMounted] = useState(false)
+  const router = useRouter()
+
+
 
   useEffect(() => {
     setMounted(true)
@@ -53,15 +57,17 @@ export default function ServiceCard({ icon, title, description, features }: Serv
           </ul>
         </CardContent>
         <CardFooter>
-          <Button
-            variant="ghost"
-            className="p-0 h-auto text-purple-400 hover:text-purple-300"
-            onClick={() => alert(`Learn more about ${title} coming soon!`)}
-          >
-            Learn More <ArrowRight className="ml-1 h-4 w-4" />
-          </Button>
+        <Button
+      variant="ghost"
+      className="p-0 h-auto text-purple-400 hover:text-purple-300"
+      onClick={() => router.push('/contact')}
+    >
+      Learn More <ArrowRight className="ml-1 h-4 w-4" />
+    </Button>
         </CardFooter>
       </Card>
     </motion.div>
   )
 }
+
+
