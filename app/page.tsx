@@ -1,5 +1,5 @@
 "use client"
-
+import { useRouter } from 'next/navigation'
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, CheckCircle, ChevronRight, Code, Database, Globe, Layers, Lock, Zap } from "lucide-react"
@@ -19,79 +19,14 @@ import PulseEffect from "@/components/pulse-effect"
 import AnimatedBackground from "@/components/animated-background"
 
 export default function Home() {
+    const router = useRouter()
+  
   return (
     <div className="flex min-h-screen flex-col bg-black text-white">
       <AnimatedBackground />
 
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-zinc-800 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-2">
-              <Zap className="h-6 w-6 text-purple-500" />
-              <span className="text-xl font-bold">Impulseia</span>
-            </Link>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="#home" className="text-sm font-medium text-white/80 hover:text-purple-400 transition-colors">
-              Home
-            </Link>
-            <Link href="#about" className="text-sm font-medium text-white/80 hover:text-purple-400 transition-colors">
-              About
-            </Link>
-            <Link
-              href="#services"
-              className="text-sm font-medium text-white/80 hover:text-purple-400 transition-colors"
-            >
-              Services
-            </Link>
-            <Link
-              href="#portfolio"
-              className="text-sm font-medium text-white/80 hover:text-purple-400 transition-colors"
-            >
-              Portfolio
-            </Link>
-            <Link href="#team" className="text-sm font-medium text-white/80 hover:text-purple-400 transition-colors">
-              Team
-            </Link>
-            <Link href="#pricing" className="text-sm font-medium text-white/80 hover:text-purple-400 transition-colors">
-              Pricing
-            </Link>
-            <Link href="#blog" className="text-sm font-medium text-white/80 hover:text-purple-400 transition-colors">
-              Blog
-            </Link>
-            <Link href="#contact" className="text-sm font-medium text-white/80 hover:text-purple-400 transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button
-              variant="outline"
-              className="hidden md:flex border-purple-700 bg-white text-black hover:bg-purple-800 hover:text-white"
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              Log In
-            </Button>
-            <Button
-              className="bg-purple-600 hover:bg-purple-700"
-              onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden text-white hover:text-purple-400"
-              onClick={() => alert("Mobile menu coming soon!")}
-            >
-              <Layers className="h-5 w-5" />
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </div>
-        </div>
-      </header>
-
+      {/* <Navbar></Navbar> */}
       <main className="flex-1">
         {/* Hero Section */}
         <HeroSection />
@@ -233,14 +168,13 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button
-                    size="lg"
-                    className="bg-purple-600 hover:bg-purple-700"
-                    onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
-                  >
-                    Learn More
-                    <ChevronRight className="ml-2 h-4 w-4" />
-                  </Button>
+                   <Button
+                        variant="ghost"
+                         className="bg-purple-600 hover:bg-purple-700"
+                        onClick={() => router.push('/contact')}
+                      >
+                        Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                      </Button>
                   <Button
                     variant="outline"
                     size="lg"

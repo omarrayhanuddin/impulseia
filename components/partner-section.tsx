@@ -6,29 +6,29 @@ import { motion } from "framer-motion"
 
 const partners = [
   {
-    name: "Company 1",
-    logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=2069&auto=format&fit=crop&w=150&h=60&crop=entropy&fit=crop",
+    name: "Microsoft",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
   },
   {
-    name: "Company 2",
-    logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=2069&auto=format&fit=crop&w=150&h=60&crop=entropy&fit=crop",
+    name: "Google",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
   },
   {
-    name: "Company 3",
-    logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=2069&auto=format&fit=crop&w=150&h=60&crop=entropy&fit=crop",
+    name: "Amazon",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
   },
   {
-    name: "Company 4",
-    logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=2069&auto=format&fit=crop&w=150&h=60&crop=entropy&fit=crop",
+    name: "Spotify",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
   },
   {
-    name: "Company 5",
-    logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=2069&auto=format&fit=crop&w=150&h=60&crop=entropy&fit=crop",
+    name: "Slack",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg",
   },
   {
-    name: "Company 6",
-    logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=2069&auto=format&fit=crop&w=150&h=60&crop=entropy&fit=crop",
-  },
+    name: "Airbnb",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg",
+  }
 ]
 
 export default function PartnerSection() {

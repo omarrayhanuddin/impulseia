@@ -16,7 +16,7 @@ const testimonials = [
     position: "CTO",
     company: "TechVision Inc.",
     avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2787&auto=format&fit=crop&w=100&h=100&crop=faces&fit=crop",
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&auto=format&fit=crop&crop=faces",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const testimonials = [
     position: "Founder",
     company: "Nexus Startups",
     avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop&w=100&h=100&crop=faces&fit=crop",
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&h=200&auto=format&fit=crop&crop=faces",
   },
   {
     id: 3,
@@ -36,10 +36,9 @@ const testimonials = [
     position: "Director of Digital",
     company: "Global Retail Solutions",
     avatar:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2787&auto=format&fit=crop&w=100&h=100&crop=faces&fit=crop",
+      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&h=200&auto=format&fit=crop&crop=faces",
   },
 ]
-
 export default function TestimonialSection() {
   const [mounted, setMounted] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
