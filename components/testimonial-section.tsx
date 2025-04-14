@@ -9,36 +9,86 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const testimonials = [
   {
-    id: 1,
-    content:
-      "Impulse transformed our outdated systems into a streamlined digital platform that increased our operational efficiency by 40%. Their team's expertise and innovative approach exceeded our expectations.",
-    author: "Sarah Johnson",
-    position: "CTO",
-    company: "TechVision Inc.",
-    avatar:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&auto=format&fit=crop&crop=faces",
+    id: 101,
+    content: "Impulseia's mobile app development increased our user retention by 55% in just three months. Their UX-focused approach was exactly what we needed.",
+    author: "David Kim",
+    position: "Product Manager",
+    company: "AppVantage",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&crop=faces"
   },
   {
-    id: 2,
-    content:
-      "Working with Impulse was a game-changer for our startup. They not only delivered a robust product but also provided strategic insights that helped us secure our next round of funding.",
-    author: "Michael Chen",
-    position: "Founder",
-    company: "Nexus Startups",
-    avatar:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&h=200&auto=format&fit=crop&crop=faces",
+    id: 102,
+    content: "The AI solution developed by Impulseia automated 70% of our manual processes, saving us over $250k annually in operational costs.",
+    author: "Priya Patel",
+    position: "Operations Director",
+    company: "LogiChain Solutions",
+    avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=200&h=200&crop=faces"
   },
   {
-    id: 3,
-    content:
-      "The e-commerce platform Impulse built for us has resulted in a 65% increase in online sales. Their attention to detail and focus on user experience made all the difference.",
-    author: "Emily Rodriguez",
-    position: "Director of Digital",
-    company: "Global Retail Solutions",
-    avatar:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&h=200&auto=format&fit=crop&crop=faces",
+    id: 103,
+    content: "Impulseia's cloud migration strategy reduced our infrastructure costs by 40% while improving system reliability. Their team was knowledgeable and efficient.",
+    author: "James Wilson",
+    position: "IT Director",
+    company: "FinTech Global",
+    avatar: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=200&h=200&crop=faces"
   },
-]
+  {
+    id: 104,
+    content: "Our website redesign by Impulseia resulted in a 120% increase in lead generation. Their conversion rate optimization expertise was impressive.",
+    author: "Sophia Martinez",
+    position: "Marketing VP",
+    company: "GrowthHack Digital",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&h=200&crop=faces"
+  },
+  {
+    id: 105,
+    content: "Impulseia's blockchain implementation brought transparency to our supply chain that helped us secure partnerships with two Fortune 500 companies.",
+    author: "Thomas Nguyen",
+    position: "Blockchain Lead",
+    company: "SupplySecure",
+    avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=200&h=200&crop=faces"
+  },
+  {
+    id: 106,
+    content: "The cybersecurity framework developed by Impulseia helped us pass our compliance audit with zero findings - a first in our company's history.",
+    author: "Olivia Smith",
+    position: "CISO",
+    company: "HealthData Systems",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&h=200&crop=faces"
+  },
+  {
+    id: 107,
+    content: "Impulseia's data analytics platform uncovered insights that improved our inventory turnover by 35%. Their team transformed our raw data into actionable intelligence.",
+    author: "Rajiv Kapoor",
+    position: "Supply Chain VP",
+    company: "Retail Dynamics",
+    avatar: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=200&h=200&crop=faces"
+  },
+  {
+    id: 108,
+    content: "The custom CRM Impulseia built has reduced our sales cycle by 22 days on average. Their understanding of our workflow was exceptional.",
+    author: "Jennifer Lee",
+    position: "Sales Director",
+    company: "Enterprise Solutions",
+    avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=200&h=200&crop=faces"
+  },
+  {
+    id: 109,
+    content: "Impulseia's IoT implementation reduced our equipment downtime by 60% through predictive maintenance. Their hardware/software integration was flawless.",
+    author: "Mohammed Ali",
+    position: "Engineering Manager",
+    company: "Industrial Automation Co",
+    avatar: "https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=200&h=200&crop=faces"
+  },
+  {
+    id: 110,
+    content: "The machine learning models developed by Impulseia improved our fraud detection accuracy by 89%. Their data science team is world-class.",
+    author: "Emma Johnson",
+    position: "Risk Management Director",
+    company: "PaymentSecure",
+    avatar: "https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=200&h=200&crop=faces"
+  }
+];
 export default function TestimonialSection() {
   const [mounted, setMounted] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)

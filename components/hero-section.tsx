@@ -151,7 +151,7 @@ export default function HeroSection() {
         </div>
       </div>
       {/* // Marquee Section (No Horizontal Scrollbar) */}
-    <div className="w-screen overflow-hidden border-y border-gray-800 py-10 mt-16">
+    <div className="w-screen overflow-hidden border-y border-gray-800 bg-purple-800 py-10 mt-16">
       <Marquee speed={90} gradient={false}>
         <div className="flex items-center gap-24 px-6">
           <span className="text-5xl md:text-7xl font-bold tracking-tighter uppercase text-white-700  text-center">
