@@ -237,7 +237,7 @@ export function Navbar() {
                 <div className="flex justify-between gap-4">
                   <Button
                     type="submit"
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+                    className="w-full bg-purple-600 hover:bg-purple-800 text-white"
                   >
                     Submit
                   </Button>
