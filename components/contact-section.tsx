@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -167,7 +166,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="font-bold mb-1 text-white">Our Location</h3>
-                <p className="text-white/70 text-sm">123 Business Avenue, Tech District, San Francisco, CA 94107</p>
+                <p className="text-white/70 text-sm">Dhaka, Bangladesh - 1260</p>
               </div>
             </CardContent>
           </Card>
@@ -179,8 +178,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="font-bold mb-1 text-white">Phone Number</h3>
-                <p className="text-white/70 text-sm">+1 (555) 123-4567</p>
-                <p className="text-white/70 text-sm">+1 (555) 987-6543</p>
+                <p className="text-white/70 text-sm">+880 1760-843880</p>
               </div>
             </CardContent>
           </Card>
@@ -192,9 +190,8 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="font-bold mb-1 text-white">Email Address</h3>
-                <p className="text-white/70 text-sm">info@impulse.com</p>
-                <p className="text-white/70 text-sm">support@impulse.com</p>
-              </div>
+                <p className="text-white/70 text-sm">info@impulseia.com</p>
+              </div>  
             </CardContent>
           </Card>
         </div>
