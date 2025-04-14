@@ -5,9 +5,12 @@ import { Toaster } from 'sonner';
 
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Impulseia ',
+  description: 'Innovative Businesses Solutions with Impulseia',
+  generator: 'Impulseia IT',
+  icons: {
+    icon: "../public/favicon.png", // online favicon
+  },
 }
 
 export default function RootLayout({
