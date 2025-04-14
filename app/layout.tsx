@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Navbar } from '@/components/navbar' // Import your Navbar component
+import { Toaster } from 'sonner';
+
 
 export const metadata: Metadata = {
   title: 'v0 App',
@@ -18,6 +20,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <main>{children}</main>
+        <Toaster position="top-center" richColors />
       </body>
     </html>
   )
