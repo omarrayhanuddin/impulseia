@@ -23,17 +23,17 @@ export default function ContactPage() {
             <div className="text-center">
               <MailIcon className="h-8 w-8 mx-auto mb-4" />
               <h3 className="text-xl font-semibold">Email</h3>
-              <p>contact@example.com</p>
+              <p>contact@Impulseia.com</p>
             </div>
             <div className="text-center">
               <PhoneIcon className="h-8 w-8 mx-auto mb-4" />
               <h3 className="text-xl font-semibold">Phone</h3>
-              <p>+1 (555) 123-4567</p>
+              <p>+880-1760843880</p>
             </div>
             <div className="text-center">
               <MapPinIcon className="h-8 w-8 mx-auto mb-4" />
               <h3 className="text-xl font-semibold">Location</h3>
-              <p>123 Business Ave, City</p>
+              <p>Dhaka, Bangladesh</p>
             </div>
           </div>
         </div>

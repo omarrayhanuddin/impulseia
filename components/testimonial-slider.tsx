@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useCallback } from "react"
-import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface Testimonial {
-  id: number
-  name: string
-  position: string
-  company: string
-  avatar: string
-  quote: string
+  id: number;
+  name: string;
+  position: string;
+  company: string;
+  avatar: string;
+  quote: string;
 }
 
 const testimonials: Testimonial[] = [
@@ -52,32 +52,32 @@ const testimonials: Testimonial[] = [
     quote:
       "Impulseia's AI-powered analytics solution has given us unprecedented insights into customer behavior. Their team's deep expertise in machine learning and financial services was evident throughout the project.",
   },
-]
+];
 
 export default function TestimonialSlider() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [direction, setDirection] = useState(0)
-  const [autoplay, setAutoplay] = useState(true)
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const [autoplay, setAutoplay] = useState(true);
 
   const nextSlide = useCallback(() => {
-    setDirection(1)
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
-  }, [])
+    setDirection(1);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  }, []);
 
   const prevSlide = useCallback(() => {
-    setDirection(-1)
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
-  }, [])
+    setDirection(-1);
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  }, []);
 
   useEffect(() => {
-    if (!autoplay) return
+    if (!autoplay) return;
 
     const interval = setInterval(() => {
-      nextSlide()
-    }, 5000)
+      nextSlide();
+    }, 5000);
 
-    return () => clearInterval(interval)
-  }, [autoplay, nextSlide])
+    return () => clearInterval(interval);
+  }, [autoplay, nextSlide]);
 
   const variants = {
     enter: (direction: number) => ({
@@ -92,7 +92,7 @@ export default function TestimonialSlider() {
       x: direction < 0 ? 1000 : -1000,
       opacity: 0,
     }),
-  }
+  };
 
   return (
     <div
@@ -168,8 +168,8 @@ export default function TestimonialSlider() {
           <button
             key={index}
             onClick={() => {
-              setDirection(index > currentIndex ? 1 : -1)
-              setCurrentIndex(index)
+              setDirection(index > currentIndex ? 1 : -1);
+              setCurrentIndex(index);
             }}
             className={`h-2 w-2 rounded-full transition-all ${
               index === currentIndex ? "bg-purple-500 w-6" : "bg-zinc-700"
@@ -179,5 +179,5 @@ export default function TestimonialSlider() {
         ))}
       </div>
     </div>
-  )
+  );
 }

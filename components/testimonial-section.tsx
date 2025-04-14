@@ -9,35 +9,85 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const testimonials = [
   {
-    id: 1,
-    content:
-      "Impulse transformed our outdated systems into a streamlined digital platform that increased our operational efficiency by 40%. Their team's expertise and innovative approach exceeded our expectations.",
-    author: "Sarah Johnson",
-    position: "CTO",
-    company: "TechVision Inc.",
-    avatar:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&auto=format&fit=crop&crop=faces",
+    "id": 1,
+    "content": "Impulse transformed our outdated systems into a streamlined digital platform that increased our operational efficiency by 40%. Their team's expertise and innovative approach exceeded our expectations.",
+    "author": "Sarah Johnson",
+    "position": "CTO",
+    "company": "TechVision Inc.",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&auto=format&fit=crop&crop=faces"
   },
   {
-    id: 2,
-    content:
-      "Working with Impulse was a game-changer for our startup. They not only delivered a robust product but also provided strategic insights that helped us secure our next round of funding.",
-    author: "Michael Chen",
-    position: "Founder",
-    company: "Nexus Startups",
-    avatar:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&h=200&auto=format&fit=crop&crop=faces",
+    "id": 2,
+    "content": "Working with Impulse was a game-changer for our startup. They not only delivered a robust product but also provided strategic insights that helped us secure our next round of funding.",
+    "author": "Michael Chen",
+    "position": "Founder",
+    "company": "Nexus Startups",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&h=200&auto=format&fit=crop&crop=faces"
   },
   {
-    id: 3,
-    content:
-      "The e-commerce platform Impulse built for us has resulted in a 65% increase in online sales. Their attention to detail and focus on user experience made all the difference.",
-    author: "Emily Rodriguez",
-    position: "Director of Digital",
-    company: "Global Retail Solutions",
-    avatar:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&h=200&auto=format&fit=crop&crop=faces",
+    "id": 3,
+    "content": "The e-commerce platform Impulse built for us has resulted in a 65% increase in online sales. Their attention to detail and focus on user experience made all the difference.",
+    "author": "Emily Rodriguez",
+    "position": "Director of Digital",
+    "company": "Global Retail Solutions",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&h=200&auto=format&fit=crop&crop=faces"
   },
+  {
+    "id": 4,
+    "content": "Impulse's AI-driven analytics gave us deep insights into customer behavior, boosting our retention rates by 25%. Their team’s expertise in machine learning is unmatched.",
+    "author": "David Patel",
+    "position": "Head of Innovation",
+    "company": "FinTech Pioneers",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&h=200&auto=format&fit=crop&crop=faces"
+  },
+  {
+    "id": 5,
+    "content": "The cloud infrastructure Impulse designed for us improved our system uptime to 99.9%. Their proactive support made the transition seamless.",
+    "author": "Lisa Thompson",
+    "position": "CEO",
+    "company": "Innovate Solutions",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&auto=format&fit=crop&crop=faces"
+  },
+  {
+    "id": 6,
+    "content": "Impulse delivered a mobile app that tripled our user engagement. Their focus on intuitive design and performance optimization was key to our success.",
+    "author": "James Carter",
+    "position": "Product Manager",
+    "company": "ConnectSphere",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop&crop=faces"
+  },
+  {
+    "id": 7,
+    "content": "Thanks to Impulse’s cybersecurity solutions, we reduced data breach risks by 80%. Their thorough audits and rapid response were impressive.",
+    "author": "Anna Kowalski",
+    "position": "Chief Security Officer",
+    "company": "SecureNet Enterprises",
+    "avatar": "https://images.unsplash.com/photo-1524504388940-9d6ebcba3f56?q=80&w=200&h=200&auto=format&fit=crop&crop=faces"
+  },
+  {
+    "id": 8,
+    "content": "Impulse’s marketing automation tools helped us personalize campaigns, increasing our conversion rates by 50%. Their team truly understands digital strategy.",
+    "author": "Rahul Sharma",
+    "position": "Marketing Director",
+    "company": "GrowEasy Analytics",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&h=200&auto=format&fit=crop&crop=faces"
+  },
+  {
+    "id": 9,
+    "content": "The supply chain platform Impulse built cut our logistics costs by 30%. Their ability to integrate complex systems was a game-changer.",
+    "author": "Maria Lopez",
+    "position": "Operations Lead",
+    "company": "ChainWorks",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&h=200&auto=format&fit=crop&crop=faces"
+  },
+  {
+    "id": 10,
+    "content": "Impulse’s data visualization dashboards empowered our team to make faster, smarter decisions, improving project delivery by 20%.",
+    "author": "Thomas Lee",
+    "position": "VP of Strategy",
+    "company": "InsightCore",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop&crop=faces"
+  }
 ]
 export default function TestimonialSection() {
   const [mounted, setMounted] = useState(false)
