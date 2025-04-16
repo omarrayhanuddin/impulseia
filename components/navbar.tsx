@@ -107,7 +107,7 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button
+          {/* <Button
             variant="outline"
             className="hidden md:flex border-purple-700 bg-white text-black hover:bg-purple-800 hover:text-white"
             onClick={() => setShowLoginForm(true)}
@@ -120,7 +120,7 @@ export function Navbar() {
           >
             Get Started
             <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          </Button> */}
           <Button
             variant="ghost"
             size="icon"
@@ -147,7 +147,7 @@ export function Navbar() {
               </button>
             ))}
             <div className="pt-4 border-t border-zinc-800 space-y-3">
-              <Button
+              {/* <Button
                 variant="outline"
                 className="w-full border-purple-700 bg-white text-black hover:bg-purple-800 hover:text-white"
                 onClick={() => setShowLoginForm(true)}
@@ -160,7 +160,7 @@ export function Navbar() {
               >
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
