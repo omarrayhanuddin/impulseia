@@ -19,7 +19,7 @@ const articles = [
   {
     title: "How AI is Transforming Business Operations",
     excerpt: "Discover how artificial intelligence is revolutionizing the way businesses operate and make decisions.",
-    image: "https://images.unsplash.com/photo-1677442135136-760c813dce9a?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070&auto=format&fit=crop", // Changed image
     date: "May 28, 2023",
     author: "Jamie Taylor",
     category: "Artificial Intelligence",

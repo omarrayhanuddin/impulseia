@@ -33,7 +33,7 @@ export default function Home() {
         <HeroSection />
 
         {/* Partner Section */}
-        <section id="partners" className="py-12 md:py-16 bg-zinc-900/50">
+        <section id="partners" className="py-12 md:py-16 bg-black">
           <div className="container">
             <div className="text-center mb-10">
               <h2 className="text-2xl font-bold tracking-tight mb-2 text-white">Trusted by Industry Leaders</h2>
