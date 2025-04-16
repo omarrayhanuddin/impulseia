@@ -19,6 +19,7 @@ export default function ContactSection() {
     message: "",
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     setMounted(true)
@@ -32,27 +33,41 @@ export default function ContactSection() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Simulate form submission
-    console.log("Form submitted:", formData)
-    setSubmitted(true)
+    setLoading(true)
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
+    const response = await fetch("https://formspree.io/f/mzzeqzqp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      }),
+    })
+
+    setLoading(false)
+
+    if (response.ok) {
+      setSubmitted(true)
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: "",
       })
-      setSubmitted(false)
-    }, 3000)
+      setTimeout(() => setSubmitted(false), 3000)
+    } else {
+      alert("There was an error submitting the form. Please try again later.")
+    }
   }
 
-  if (!mounted) {
-    return null
-  }
+  if (!mounted) return null
 
   return (
     <div className="grid lg:grid-cols-3 gap-8">
@@ -90,9 +105,7 @@ export default function ContactSection() {
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-white">
-                      Your Name
-                    </Label>
+                    <Label htmlFor="name" className="text-white">Your Name</Label>
                     <Input
                       id="name"
                       placeholder="John Doe"
@@ -103,9 +116,7 @@ export default function ContactSection() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-white">
-                      Your Email
-                    </Label>
+                    <Label htmlFor="email" className="text-white">Your Email</Label>
                     <Input
                       id="email"
                       type="email"
@@ -118,9 +129,7 @@ export default function ContactSection() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="subject" className="text-white">
-                    Subject
-                  </Label>
+                  <Label htmlFor="subject" className="text-white">Subject</Label>
                   <Input
                     id="subject"
                     placeholder="How can we help you?"
@@ -131,9 +140,7 @@ export default function ContactSection() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-white">
-                    Message
-                  </Label>
+                  <Label htmlFor="message" className="text-white">Message</Label>
                   <Textarea
                     id="message"
                     placeholder="Tell us about your project..."
@@ -143,8 +150,12 @@ export default function ContactSection() {
                     onChange={handleChange}
                   />
                 </div>
-                <Button type="submit" className="w-full md:w-auto bg-purple-600 hover:bg-purple-700">
-                  Send Message
+                <Button
+                  type="submit"
+                  className="w-full md:w-auto bg-purple-600 hover:bg-purple-700"
+                  disabled={loading}
+                >
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             )}

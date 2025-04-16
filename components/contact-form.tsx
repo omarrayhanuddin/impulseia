@@ -42,7 +42,7 @@ export default function ContactForm() {
           <div className="h-12 w-12 rounded-full bg-green-500/10 flex items-center justify-center mb-4">
             <Check className="h-6 w-6 text-green-500" />
           </div>
-          <h3 className="text-xl font-bold mb-2">Message Sent!</h3>
+          <h3 className="text-xl font-bold mb-2">Message Sent! </h3>
           <p className="text-zinc-400">Thank you for reaching out. We'll get back to you shortly.</p>
         </div>
       ) : (
