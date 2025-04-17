@@ -1,91 +1,73 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 interface LogoGlowProps {
   imagePath: string;
   alt?: string;
   className?: string;
-  bubbleCount?: number;
 }
 
 const LogoGlow: React.FC<LogoGlowProps> = ({ 
   imagePath, 
   alt = "Logo", 
-  className = "",
-  bubbleCount = 12
+  className = "" 
 }) => {
-  // Generate random bubble positions
-  const bubbles = Array.from({ length: bubbleCount }).map((_, i) => {
-    const angle = (i * (360 / bubbleCount)) + (Math.random() * 30 - 15);
-    const distance = 50 + Math.random() * 20;
-    const size = 2 + Math.random() * 3;
-    const delay = Math.random() * 2;
-    const duration = 3 + Math.random() * 2;
-    
-    return {
-      angle,
-      distance,
-      size,
-      delay,
-      duration
-    };
-  });
+  // Add the animation styles dynamically
+  useEffect(() => {
+    const styleId = 'logo-glow-pulse-styles';
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement('style');
+      style.id = styleId;
+      style.textContent = `
+        @keyframes pulse-glow {
+          0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.6;
+            transform: scale(1.1);
+          }
+        }
+        
+        .animate-pulse-glow {
+          animation: pulse-glow 3s infinite;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }, []);
 
   return (
     <div className="relative flex justify-center items-center w-full max-w-[300px]">
-      {/* Main logo with subtle glow */}
+      {/* Animated pulse effect */}
+      <div className="absolute w-full h-full z-[-2] animate-pulse-glow">
+        <div className="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(114,194,252,0.3)_0%,rgba(138,92,246,0.1)_40%,rgba(0,0,0,0)_70%)]"></div>
+      </div>
+      
+      {/* Enhanced backdrop glow for better contrast */}
+      <div className="absolute w-full h-full z-[-1] 
+        bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.1)_0%,rgba(0,0,0,0)_70%)] 
+        dark:bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.25)_0%,rgba(0,0,0,0)_70%)]"
+      ></div>
+      
+      {/* Logo with stronger light outline and enhanced visibility */}
       <img 
         src={imagePath} 
         alt={alt}
-        className={`w-full brightness-105 contrast-110 ${className}`}
-        style={{
-          filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.3))',
-        }}
+        className={`w-full filter 
+          brightness-[1.4] contrast-[1.4] 
+          dark:brightness-[1.7] dark:contrast-[1.3] 
+          drop-shadow-[0_0_2px_rgba(255,255,255,1)] 
+          dark:drop-shadow-[0_0_2px_rgba(255,255,255,1)] 
+          drop-shadow-[0_0_4px_rgba(255,255,255,0.8)] 
+          dark:drop-shadow-[0_0_4px_rgba(255,255,255,0.9)] 
+          drop-shadow-[0_0_7px_rgb(114,194,252)] 
+          dark:drop-shadow-[0_0_10px_rgb(114,194,252)] 
+          drop-shadow-[0_0_15px_rgba(138,92,246,0.842)] 
+          dark:drop-shadow-[0_0_15px_rgba(138,92,246,0.6)] 
+          saturate-150 dark:saturate-200
+          ${className}`}
       />
-      
-      {/* Floating bubbles */}
-      <div className="absolute inset-0 overflow-hidden">
-        {bubbles.map((bubble, index) => (
-          <div
-            key={index}
-            className="absolute rounded-full bg-white opacity-20 animate-float"
-            style={{
-              left: '50%',
-              top: '50%',
-              width: `${bubble.size}px`,
-              height: `${bubble.size}px`,
-              transform: `translate(-50%, -50%) 
-                           translate(${Math.cos(bubble.angle * Math.PI / 180) * bubble.distance}px, 
-                                    ${Math.sin(bubble.angle * Math.PI / 180) * bubble.distance}px)`,
-              animationDelay: `${bubble.delay}s`,
-              animationDuration: `${bubble.duration}s`,
-            }}
-          />
-        ))}
-      </div>
-      
-      {/* Add this to your global CSS or CSS-in-JS */}
-      <style jsx>{`
-        @keyframes float {
-          0% {
-            transform: translate(-50%, -50%) 
-                       translate(var(--tx), var(--ty));
-            opacity: 0.2;
-          }
-          50% {
-            opacity: 0.4;
-          }
-          100% {
-            transform: translate(-50%, -50%) 
-                       translate(calc(var(--tx) * 1.2), calc(var(--ty) * 1.2));
-            opacity: 0;
-          }
-        }
-        .animate-float {
-          animation-name: float;
-          animation-iteration-count: infinite;
-          animation-timing-function: ease-in-out;
-        }
-      `}</style>
     </div>
   );
 };
