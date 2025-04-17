@@ -61,7 +61,6 @@ export function Navbar() {
               <LogoGlow 
             imagePath="./impulseaia.png" 
             alt="My Logo"
-            bubbleCount={15} // More bubbles
             className="max-w-[200px]" // Control logo size
 />
             </div>
