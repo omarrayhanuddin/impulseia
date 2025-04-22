@@ -535,9 +535,12 @@ export default function Home() {
         <div className="border-t border-zinc-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">© {new Date().getFullYear()} Impulseia. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="#" className="text-sm text-white/60 hover:text-purple-400">
-              Privacy Policy
-            </Link>
+          <span
+      onClick={() => router.push('/Privacypolicy')}
+      className="cursor-pointer text-sm text-white/60 hover:text-purple-400"
+    >
+      Privacy Policy
+    </span>
             <Link href="#" className="text-sm text-white/60 hover:text-purple-400">
               Terms of Service
             </Link>
