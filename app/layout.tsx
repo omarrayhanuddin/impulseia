@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Innovative Businesses Solutions with Impulseia',
   generator: 'Impulseia IT',
   icons: {
-    icon: '/favicon.png', // Correct path from public/
+    icon: '/favicon.png', // Correct path from /public
   },
 }
 
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Tag Manager Script */}
+        {/* Google Tag Manager */}
         <Script id="gtm-init" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -31,20 +31,25 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-WLTVJGZ8');
           `}
         </Script>
-        {/* Optional: additional <meta> tags or font links can go here */}
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B9HK9CNVRT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-B9HK9CNVRT');
-</script>
+        {/* Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-B9HK9CNVRT"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B9HK9CNVRT');
+          `}
+        </Script>
       </head>
 
       <body>
-        {/* Google Tag Manager (noscript) */}
+        {/* GTM noscript fallback */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WLTVJGZ8"
@@ -53,7 +58,6 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
 
         <Navbar />
         <main>{children}</main>
