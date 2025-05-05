@@ -32,6 +32,15 @@ export default function RootLayout({
           `}
         </Script>
         {/* Optional: additional <meta> tags or font links can go here */}
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B9HK9CNVRT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B9HK9CNVRT');
+</script>
       </head>
 
       <body>
