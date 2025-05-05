@@ -5,9 +5,6 @@ import ContactForm from "@/components/contact-form";
 import { ArrowRight, Layers, Link, MailIcon, MapPinIcon, PhoneIcon, Zap } from "lucide-react";
 
 
-
-
-
 export default function ContactPage() {
   return (
     
